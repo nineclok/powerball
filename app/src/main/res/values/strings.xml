@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">powerball</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Lottery Tools</string>
+    <string name="nav_header_subtitle">Powerball, Megamillions, and Simulation</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="my_tickets">My Tickets</string>
+    <string name="past">Past Results</string>
+    <string name="powerball">Powerball</string>
+    <string name="add_ticket">Add Ticket</string>
+    <string name="megamillions">Mega Millions</string>
+    <string name="none">None</string>
+    <string name="multiplier">Multiplier</string>
+    <string name="remove">Remove</string>
+    <string name="nowin">No win this drawing</string>
+    <string name="alertticket">You cannot have duplicate numbers in your ticket, try again?</string>
+    <string name="numbers">Fetching Latest Numbers</string>
+    <string name="simulator">Simulator</string>
+    <string name="years">Years</string>
+    <string name="weeks">Weeks</string>
+    <string name="hits">Hits</string>
+    <string name="average">Average</string>
+    <string name="minimum">Minimum</string>
+    <string name="totalplays">Total Plays</string>
+    <string name="reset">Reset</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="messageDialog">Are you sure you want to reset the simulation</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="resetyes">Reset Simulation</string>
+    <string name="simrunning">Simulation is Running</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+</resources>
