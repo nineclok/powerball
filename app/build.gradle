@@ -10,16 +10,38 @@ android {
         applicationId "com.picker.powerball"
         minSdk 23
         targetSdk 32
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    signingConfigs {
+        releaseWithSignedKey {
+            storeFile file("/home/key")
+            storePassword "rw6100"
+            keyAlias "key0"
+            keyPassword "rw6100"
+        }
+    }
     buildTypes {
+        debug {
+            //In here only TestAd keys (these are public test keys free to use)
+            resValue("string", "mobileads_app_id", "ca-app-pub-3940256099942544~3347511713")
+            resValue("string", "banner_ad_unit_id_no_1", "ca-app-pub-3940256099942544/6300978111")
+            resValue("string", "banner_ad_unit_id_no_2", "ca-app-pub-3940256099942544/6300978111")
+            resValue("string", "interstitial_ad_unit_no_1", "ca-app-pub-3940256099942544/1033173712")
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            //In here only your own production Ad keys
+            resValue("string", "mobileads_app_id", "ca-app-pub-4963400211190283~9712411590")
+            resValue("string", "banner_ad_unit_id_no_1", "ca-app-pub-4963400211190283/1833921575")
+            resValue("string", "interstitial_ad_unit_no_1", "ca-app-pub-4963400211190283/9329268219")
+
+            //sign jenkins output
+            signingConfig signingConfigs.releaseWithSignedKey
         }
     }
     compileOptions {
@@ -37,9 +59,11 @@ dependencies {
     implementation 'androidx.core:core-splashscreen:1.0.0'
     implementation 'com.google.code.gson:gson:2.9.0'
     implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.google.android.gms:play-services-ads:21.2.0'
     //custom -
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.5.0'
+
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
