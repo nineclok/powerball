@@ -175,7 +175,14 @@ class MainActivity : AppCompatActivity() {
     // admob -
 
     fun onPredict(view: View) {
+        if (counter == 0) {
+            Log.d(Utils.TAG, "onPredict counter == 0")
+            display()
+        } else {
+            // Predict number +
             val intentPredict = Intent(this, PredictActivity::class.java)
             startActivity(intentPredict)
+            // Predict number -
+        }
     }
 }

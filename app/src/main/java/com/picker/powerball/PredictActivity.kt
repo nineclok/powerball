@@ -90,6 +90,10 @@ class PredictActivity : Activity() {
             }
 
             // Calculate prediction - apply latest winning number for the better effect.
+            if (predictTickets.size == 0) {
+                Log.d(Utils.TAG, "onPredict: size == 0 ")
+                return@launch
+            }
             val latestTicket = predictTickets[0]
             val latestWinNumbers = latestTicket?.winningNumber?.split(" ")?.toTypedArray()
             if (latestWinNumbers != null) {
